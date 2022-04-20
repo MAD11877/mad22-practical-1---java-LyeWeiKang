@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+
 
 public class Question5
 {
@@ -27,25 +29,36 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    System.out.println("Enter the number of integers:");
     int number=in.nextInt();
-    int[] arr=new int[number]
+    ArrayList<Integer>numberList = new ArrayList<>();
     for(int i=0;i<number;i++){
-      System.out.println("Enter a number:");
-      arr[i]=in.nextInt();   
+        int numbers=in.nextInt();
+        numberList.add(numbers);
     }
-    Arrays.sort(arr);
-    for(i=0;i<arr.length;i++){
-      int count=1;
-      for(int j=i+1;j<arr.length;j++){
-        if (arr[i]==arr[j]){
+    Collections.sort(numberList);
+    ArrayList<Integer>occurenceList = new ArrayList<>();
+    for (int i = 0; i < numberList.Count; i++){
+      int count = 1;
+      if(i+1<numberList.Count;i++){
+        if (numberList[i]==numberList[i+1]){
           count+=1;
-        }
-        else{
-          break;
+          i++;
+          while(i+1<numberList.Count&&numberList[i+1]==numberList[i]){
+            count+=1;
+            i++;
+          }
         }
       }
+      occurenceList.add(count)
     }
-    
-  }
-}
+    int highest=0;
+    for(int i=0;i<occurenceList.Count;i++){
+      if(occurenceList[i]>highest){
+        highest=occurenceList[i];
+      }
+    }
+    System.out.println(numberList[highest]);
+          
+      
+                
+            
