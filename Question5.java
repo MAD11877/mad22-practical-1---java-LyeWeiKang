@@ -49,7 +49,7 @@ public class Question5
           }
         }
       }
-      occurenceList.add(count)
+      occurenceList.add(count);
     }
     int highest=0;
     for(int i=0;i<occurenceList.Count;i++){
