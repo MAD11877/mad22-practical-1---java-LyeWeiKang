@@ -10,7 +10,6 @@ public class Question3
      */
      
     Scanner in = new Scanner(System.in);
-    System.out.println("Enter a number:");
     int number=in.nextInt();
     int finalNumber=number*number;
     System.out.println(finalNumber);
