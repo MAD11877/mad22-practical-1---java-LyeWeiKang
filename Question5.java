@@ -39,7 +39,7 @@ public class Question5
     ArrayList<Integer>occurenceList = new ArrayList<>();
     for (int i = 0; i < numberList.Count; i++){
       int count = 1;
-      if(i+1<numberList.Count;i++){
+      if(i+1<numberList.Count){
         if (numberList[i]==numberList[i+1]){
           count+=1;
           i++;
@@ -58,6 +58,8 @@ public class Question5
       }
     }
     System.out.println(numberList[highest]);
+  }
+}
           
       
                 
