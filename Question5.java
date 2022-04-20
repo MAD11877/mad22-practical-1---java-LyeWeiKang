@@ -37,13 +37,13 @@ public class Question5
     }
     Collections.sort(numberList);
     ArrayList<Integer>occurenceList = new ArrayList<>();
-    for (int i = 0; i < numberList.Count; i++){
+    for (int i = 0; i < numberList.size(); i++){
       int count = 1;
-      if(i+1<numberList.Count){
-        if (numberList[i]==numberList[i+1]){
+      if(i+1<numberList.size()){
+        if (numberList.get(i)==numberList.get(i+1)){
           count+=1;
           i++;
-          while(i+1<numberList.Count&&numberList[i+1]==numberList[i]){
+          while(i+1<numberList.size()&&numberList.get(i+1)==numberList.get(i)){
             count+=1;
             i++;
           }
@@ -52,12 +52,12 @@ public class Question5
       occurenceList.add(count);
     }
     int highest=0;
-    for(int i=0;i<occurenceList.Count;i++){
-      if(occurenceList[i]>highest){
-        highest=occurenceList[i];
+    for(int i=0;i<occurenceList.size();i++){
+      if(occurenceList.get(i)>highest){
+        highest=occurenceList.get(i);
       }
     }
-    System.out.println(numberList[highest]);
+    System.out.println(numberList.get(highest));
   }
 }
           
