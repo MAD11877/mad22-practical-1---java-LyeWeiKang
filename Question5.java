@@ -59,7 +59,6 @@ public class Question5
         highest=occurenceList.get(i);
       }
     }
-    System.out.println(numberList.get(highest));
     int index=occurenceList.indexOf(highest);
     for(int i=0;i<index;i++){
       highest+=occurenceList.get(i);
